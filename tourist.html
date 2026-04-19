@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <script>
+      function showSlidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+     function hideSlidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+    </script>
+</head>
+<body>
+     <nav>
+         <button class="burger"onclick = showSlidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F19E39"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg></button>
+         <Ul class="sidebar">
+            <li onclick = hideSlidebar()><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="40px" fill="#F19E39"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="tffc.html">TFFC</a></li>
+            <li><a href="#member">Members</a></li>
+        </Ul>
+
+       <Ul class="desktop-nav">
+             <li><img  src="IMAGE/TFRD-logo.png" width="55px"></image></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="project.html">Project</a></li>
+            <li class="hideOnMobile"><a href="#blog">Blog</a></li>
+            <li class="hideOnMobile"><a href="tffc.html">TFFC</a></li>
+            <li class="hideOnMobile"><a href="#member">Members</a></li>
+            
+        </Ul>
+    </nav>
+
+
+    <section id="blog" class="blog-section">
+    <div class="blog-container">
+        <header class="blog-header">
+        
+            <h2 class="section-title">Eco-Turism</h2>
+            
+           
+        </header>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="card-img-wrapper">
+                    <img src="IMAGE/" alt="Rainforest Protection">
+                    
+                </div>
+                <div class="card-body">
+                    <span class="post-date">July 15, 2025</span>
+                    <h3>New Buffer Zone Established in Dja Reserve</h3>
+                    <p>We've successfully partnered with local villages to educate them on the various non timber product, how to commecialize and develop thier community...</p>
+                    <a href="#" class="read-more">Read Story →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="event">
+                <div class="card-img-wrapper">
+                    <video controls src="" alt="Sustainable Workshop">
+                    
+                </div>
+                <div class="card-body">
+                    <span class="post-date">August 02, 2025</span>
+                    <h3>Annual Sustainable rubber tree</h3>
+                    <p> 1200 rubber tree seedlings planted in the old towns
+                        around the periphery of Campo Ma'an National Park...</p>
+                    <a href="#" class="read-more">Register Now →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="events">
+                <div class="card-img-wrapper">
+                    <img src="IMAGE/" alt="Sustainable Workshop">
+                    <span class="card-tag tag-event">Event</span>
+                </div>
+                <div class="card-body">
+                    <span class="post-date">August 02, 2025</span>
+                    <h3>Land allocated </h3>
+                    <p>2.9 hectares of old fallow land were developed
+                        for planting rubber trees, representing and avoided deforestation...</p>
+                    <a href="#" class="read-more">Register Now →</a>
+                </div>
+            </article>
+
+            
+</section>
+
+<footer class="main-footer" id="contact">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h2 class="footer-logo">TF-RD</h2>
+            <p class="footer-about">Join us in building nature's economy and protecting Cameroon's vital ecosystems.</p>
+            <div class="donate-box">
+                <a href="project.html#donate" class="btn btn-primary donate-footer-btn">Support Our Mission</a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul class="contact-list">
+                <li><img class="social-icon" src="/IMAGE/location.png"> Yaoundé, Centre Region, Cameroon, Eleveur – Ngousso (Rue de l’ancienne entrée Ministre)</li>
+                <li><img class="social-icon" src="/IMAGE/contact.png">+237 6 77 74 11 41</li>
+                <li><img class="social-icon" src="/IMAGE/mail.jpeg"> tfrd2009@yahoo.fr</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for latest news and impact reports.</p>
+            <form id="newsletterForm" class="footer-newsletter">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Join</button>
+            </form>
+            
+            <div class="social-links">
+                <a href="https://share.google/DdvemnEY6sfR4CxTl" aria-label="Facebook"><img class="social-icon" src="/IMAGE/face.png"></a>
+                <a href="https://share.google/Ss8bnPbLGKpTSslnG" aria-label="LinkedIn"><img class="social-icon" src="/IMAGE/link.png"></a>
+                <a href=" https://share.google/1BKIf1HUmh3HH0IOA" aria-label="Youtube" ><img class="social-icon" src="data:image/png;base64,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"></a>
+                <a href="https://www.instagram.com/tropical_forest_rural_dev?igsh=MXFqdDcxaXpidW1pNQ%3D%3D&utm_source=qr" aria-label="Instagram"><img class="social-icon" src="/IMAGE/insta.jpeg"></a>
+                <a href="https://vt.tiktok.com/ZSmbBKGNA/" aria-label="TikTok" ><img class="social-icon" src="/IMAGE/tik.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <p>&copy; 2025 TFRD. All Rights Reserved.</p>
+            <p>Developed by <span class="developer-tag">
+                OnyxForge</span><br><a href="#" aria-label="OnyxForge" ><img class="social-icon" src="/pictures/OWaeonwhite.png"></a></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
