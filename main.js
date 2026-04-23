@@ -53,3 +53,21 @@ if (loadMoreBtn) {
     });
 }
 
+    // --- 2. FILTER INTERACTIVITY ---
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Update UI buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
