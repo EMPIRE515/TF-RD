@@ -276,14 +276,14 @@ nav li:first-child{
 }
 
 .about-container {
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 90px;
     align-items: center;
 }
 
@@ -303,8 +303,7 @@ nav li:first-child{
 
 .mission-vision {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
     margin-bottom: 30px;
 }
 
