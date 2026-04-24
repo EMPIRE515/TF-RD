@@ -282,13 +282,8 @@ nav li:first-child{
 
 .about-grid {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: 1.5fr 1fr;
     gap: 90px;
-=======
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
->>>>>>> d2aa2c7 (resent update of image and files)
     align-items: center;
 }
 
