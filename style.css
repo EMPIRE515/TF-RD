@@ -53,71 +53,77 @@ nav li:first-child{
   position: -webkit-sticky;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background-color: white;
   box-shadow: #1a1a1a 0px 2px 4px;
-
 }
 .burger{
-    position:fixed;
-    position: -webkit-sticky;
-    margin-left: 250px;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    margin: 0;
     border: none;
     cursor: pointer;
     background-color: white;
     border-radius: 5px;
-    width: 100px;
+    width: 50px;
     height: 50px;
-    z-index: 1000;
+    z-index: 1001;
+    display: none;
 }
 
 .sidebar{
-    position:fixed;
-    position: -webkit-sticky;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 250px;
+    width: min(280px, 90vw);
     z-index: 999;
-    background-color: rgba(225, 225, );
+    background-color: rgba(225, 225, 225, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    padding: 1rem;
 }
 .sidebar li{
-    width: auto;
+    width: 100%;
+    margin-bottom: 0.75rem;
 }
 .sidebar a{
-    width: auto;
+    width: 100%;
+    display: block;
+    padding: 0.75rem 1rem;
 }
 .container{
     justify-content: center;
     display: grid;
     align-content: center;
-    overflow-x: scroll;
-
-    
+    overflow-x: hidden;
+    padding: 1rem;
 }
 .wrapper{
     display: flex;
     gap: 20px;
-    width: 400px;
-    overflow-x: scroll;
-    scroll-snap-type:proximity;
-    border-radius:14px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    border-radius: 14px;
     align-content: center;
-    
+    padding-bottom: 1rem;
 }
 .card{
     scroll-snap-align: center;
     box-sizing: border-box;
     padding: 20px 30px;
     flex-shrink: 0;
-    width: 400px;
-    background-color: rgba(250, 246, 246, 0.767);
+    width: min(400px, 100%);
+    max-width: 100%;
+    background-color: rgba(250, 246, 246, 0.95);
     border-radius: 14px;
     text-align: center;
     justify-content: center;
@@ -135,37 +141,69 @@ nav li:first-child{
     box-sizing: border-box;
     padding: 20px 30px;
     flex-shrink: 0;
-    width: 400px;
+    width: min(400px, 100%);
+    max-width: 100%;
     border-radius: 14px;
     text-align: center;
     align-items: center;
 }
-.buttonX{
-    height: 9vh; 
-    width: 15vh;
+.buttonX,
+.buttonY{
+    min-width: 140px;
+    width: 100%;
+    max-width: 220px;
     border-radius: 35px;
     border-color: darkgoldenrod;
     backdrop-filter: blur(2px);
+}
+.buttonX{
+    height: 9vh;
     background-color: rgba(241, 241, 241, 0.055);
-    margin-right: 70px;
+    margin-right: 0;
 }
 .buttonY{
-    height: 9vh; 
-    width: 15vh;
-    border-radius: 35px;
-    border-color: darkgoldenrod;
-    backdrop-filter: blur(10px);
+    height: 9vh;
     background-color: rgb(233, 155, 12);
 }
 .menu-button{
     display: block;
 }
-@media(max-width:700px) {
+@media (max-width: 1000px) {
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav li{
+        margin: 0.25rem;
+    }
+    nav a{
+        padding: 0.75rem 16px;
+    }
+}
+
+@media (max-width: 700px) {
     .desktop-nav{
         display: none;
-    
     }
-
+    .burger{
+        display: block;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .wrapper{
+        gap: 16px;
+    }
+    .card,
+    .card1{
+        padding: 16px;
+    }
+    .buttonX,
+    .buttonY{
+        min-width: auto;
+        width: 100%;
+        max-width: none;
+    }
 }
 
 /*hero styling */
@@ -501,6 +539,14 @@ nav li:first-child{
     border-radius: 5px;
     font-size: 0.8rem;
     font-weight: bold;
+}
+
+/* Ensure the wrapper handles the embedded video dimensions */
+.card-img-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
 }
 
 .tag-event { background: #6b8e23; }
