@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/tropicalforestfc@gmail.com/public_html
-    - /bin/cp -R * $DEPLOYPATH
