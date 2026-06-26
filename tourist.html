@@ -16,14 +16,76 @@
         sidebar.style.display = 'none'
     }
     </script>
+
+<style>
+
+    /* ============================================================
+   AUTOMATIC IMAGE SWAPPER FOR BLOG CARDS
+   ============================================================ */
+
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Adjust height to match your theme guidelines */
+    overflow: hidden;
+}
+
+.image-swapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+}
+
+/* Absolute stacks place all images directly over each other */
+.swap-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: imageSwapLoop 12s infinite ease-in-out;
+}
+
+/* Staggered start times create sequential changes */
+.swap-img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.swap-img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.swap-img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/* 12-Second Loop (4s per view interval: 33.3% increments) */
+@keyframes imageSwapLoop {
+    0%, 8.3% {
+        opacity: 0;       /* Hidden or starting to fade in */
+    }
+    16.6%, 33.3% {
+        opacity: 1;       /* Fully visible frame slot */
+    }
+    41.6%, 100% {
+        opacity: 0;       /* Disappear cleanly to give way to next image */
+    }
+}
+
+</style>
+
 </head>
 <body>
-     <nav>
-         <button class="burger"onclick = showSlidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F19E39"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg></button>
+    <nav>
+         <button class="burger" onclick = showSlidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F19E39"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg></button>
          <Ul class="sidebar">
             <li onclick = hideSlidebar()><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="40px" fill="#F19E39"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="project.html">Project</a></li>
+            <li><a href="research.html">Research</a></li>
             <li><a href="#blog">Blog</a></li>
             <li><a href="tffc.html">TFFC</a></li>
             <li><a href="#member">Members</a></li>
@@ -33,6 +95,7 @@
              <li><img  src="IMAGE/TFRD-logo.png" width="55px"></image></li>
             <li class="hideOnMobile"><a href="index.html">Home</a></li>
             <li class="hideOnMobile"><a href="project.html">Project</a></li>
+            <li class="hideOnMobile"><a href="research.html">Research</a></li>
             <li class="hideOnMobile"><a href="#blog">Blog</a></li>
             <li class="hideOnMobile"><a href="tffc.html">TFFC</a></li>
             <li class="hideOnMobile"><a href="#member">Members</a></li>
@@ -51,40 +114,40 @@
         </header>
 
         <div class="blog-grid">
-            <article class="blog-card">
-                <div class="card-img-wrapper">
-                    <img src="IMAGE/turist.jpeg" alt="Rainforest Protection">
-                    
-                </div>
-                <div class="card-body">
-                    <span class="post-date">July 15, 2025</span>
-                    <h3>ecotourism around the DJA Biosphere Reserve</h3>
-                    <p>Several initiatives are being supported by Tropical Forest in the field of ecotourism around the DJA Biosphere Reserve.
-                      Several initiatives are being supported in the areas of ecotourism, community initiatives, and basic social infrastructure with the aim of generating income and contributing to improving the living conditions of local populations.
-                      In terms of ecotourism, Tropical Forest Community Initiatives has contributed to:
-                      •Creation of women's groups/training, identity cards;
-                      • Children's education (impact of deforestation, poaching, creation of an agricultural training center, support for a primary school, etc.);
-                        Establishment of a cooperative;
-                      Development of living spaces;
-                      Installation of wildlife observation cameras;
-                      Training of tourist guides and local operators. • The production of materials describing ecotourism sites and their potential;
-                      The sale of processed forest products;
-                     The development of tour-based tourism activities.</p>
-                    <a href="#" class="read-more">Read Story →</a>
-                </div>
-            </article>
 
-                        <article class="blog-card">
-                <div class="card-img-wrapper">
-                    <img src="IMAGE/baord.jpeg" alt="Rainforest Protection">
-                    
-                </div>
-                <div class="card-body">
-                    <span class="post-date">July 15, 2025</span>
-                    <h3>ecotourism around the DJA Biosphere Reserve</h3>
-                    <p>🏺 The Bifolone Cultural Museum
-                    The Bifolone Museum is a true gateway to the world of the Baka indigenous people.
 
+<article class="blog-card" data-category="event">
+    <div class="card-img-wrapper">
+        <div class="image-swapper">
+            <img src="IMAGE/turist.jpeg" alt="Seedlings preparation" class="swap-img">
+            <img src="IMAGE/tor1.jpeg" alt="Community planting" class="swap-img">
+            <img src="IMAGE/tor2.jpeg" alt="Campo Ma'an Peripheral nursery" class="swap-img">
+            <img src="IMAGE/tor3.jpeg" alt="Campo Ma'an Peripheral nursery" class="swap-img">
+        </div>
+        <span class="card-tag tag-event">Event</span>
+    </div>
+    <div class="card-body">
+        <span class="post-date">August 02, 2025</span>
+        <h3>ecotourism around the DJA Biosphere Reserve</h3>
+        <p>Several initiatives are being supported by Tropical Forest in the field of ecotourism around the DJA Biosphere Reserve.
+         Several initiatives are being supported in the areas of ecotourism, community initiatives, and basic social infrastructure with the aim of generating income and contributing to improving the living conditions of local populations.In terms of ecotourism</p>
+       <a href="project.html" class="read-more">Read Story →</a>
+    </div>
+</article>
+
+<article class="blog-card" data-category="event">
+    <div class="card-img-wrapper">
+        <div class="image-swapper">
+            <img src="IMAGE/baord.jpeg" alt="Seedlings preparation" class="swap-img">
+            <img src="IMAGE/Museum1.jpeg" alt="Seedlings preparation" class="swap-img">
+            <img src="IMAGE/Museum2.jpeg" alt="Community planting" class="swap-img">
+        </div>
+        <span class="card-tag tag-event">Event</span>
+    </div>
+    <div class="card-body">
+        <span class="post-date">August 02, 2025</span>
+        <h3>The Bifolone Museum</h3>
+        <p> The Bifolone Museum is a true gateway to the world of the Baka indigenous people.
                       Through:
                       • traditional objects,
                       • handcrafted works,
@@ -92,29 +155,28 @@
                       • books,
                       • and cultural narratives,
                      visitors discover the history, knowledge, and way of life of the forest peoples of the Congo Basin.</p>
-                    <a href="project.html" class="read-more">Read Story →</a>
-                </div>
-            </article>
+       <a href="project.html" class="read-more">Read Story →</a>
+    </div>
+</article>
 
-                         <article class="blog-card" data-category="event">
-                <div class="card-img-wrapper">
-                    <iframe 
-                            src="https://youtu.be/1HbGjioSSKc" 
-                            title="Annual Sustainable rubber tree" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                       </iframe>
-                    <span class="card-tag tag-event">Event</span>
-                </div>
-                <div class="card-body">
-                    <span class="post-date">August 02, 2025</span>
-                    <h3>Annual Sustainable rubber tree</h3>
-                    <p> 1200 rubber tree seedlings planted in the old towns
-                        around the periphery of Campo Ma'an National Park...</p>
-                   <a href="project.html" class="read-more">Read Story →</a>
-                </div>
-            </article>
+<article class="blog-card" data-category="event">
+    <div class="card-img-wrapper">
+        <div class="image-swapper">
+            <img src="IMAGE/plant1.jpeg" alt="Seedlings preparation" class="swap-img">
+            <img src="IMAGE/boat.jpeg" alt="Community planting" class="swap-img">
+            <img src="IMAGE/group_planting.jpeg" alt="Campo Ma'an Peripheral nursery" class="swap-img">
+        </div>
+        <span class="card-tag tag-event">Event</span>
+    </div>
+    <div class="card-body">
+        <span class="post-date">August 02, 2025</span>
+        <h3>plantation</h3>
+        <p> 1200 tree seedlings planted in the old towns
+        </p>
+       <a href="project.html" class="read-more">Read Story →</a>
+    </div>
+</article>
+
 
             
 

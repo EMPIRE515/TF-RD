@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFRD | Research & Conservation Science</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    <script>
+      function showSlidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+     function hideSlidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+    </script>
+<body>
+
+        <nav>
+         <button class="burger" onclick = showSlidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F19E39"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg></button>
+         <Ul class="sidebar">
+            <li onclick = hideSlidebar()><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="40px" fill="#F19E39"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="tffc.html">TFFC</a></li>
+            <li><a href="index.html#member">Members</a></li>
+        </Ul>
+
+       <Ul class="desktop-nav">
+             <li><img  src="IMAGE/TFRD-logo.png" width="55px"></image></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="project.html">Project</a></li>
+            <li class="hideOnMobile"><a href="research.html">Research</a></li>
+            <li class="hideOnMobile"><a href="index.html#blog">Blog</a></li>
+            <li class="hideOnMobile"><a href="tffc.html">TFFC</a></li>
+            <li class="hideOnMobile"><a href="index.html#member">Members</a></li>
+            
+        </Ul>
+    </nav>
+
+    <header class="research-hero-banner">
+        <div class="hero-inner">
+            <span class="welcome-tag">Science & Data</span>
+            <h1>Conservation Research</h1>
+            <p>Empirical studies, field monitoring, and community-led ecological tracking in the Dja Biosphere Reserve.</p>
+        </div>
+    </header>
+
+    <main class="research-container">
+
+        <section class="research-item-block ongoing">
+            <div class="research-meta-header">
+                <span class="status-badge status-ongoing">Ongoing Project</span>
+                <span class="research-timeline"><i class="fa-regular fa-calendar"></i> 2024 - Present</span>
+            </div>
+            
+            <h2 class="research-title">Primate Population Density & Canopy Mapping</h2>
+            <p class="research-lead"><strong>Lead Investigators:</strong> Dr. E. Ndip, TFRD Field Biology Unit</p>
+            
+            <div class="research-body-grid">
+                <div class="research-text-content">
+                    <h3>Objective & Scope</h3>
+                    <p>Using a combination of bioacoustic monitoring devices and camera traps, this initiative tracks the migratory and breeding patterns of Western Lowland Gorillas and Chimpanzees across the secondary forest borders.</p>
+                    
+                    <h3>Current Progress</h3>
+                    <p>Over 140 days of continuous acoustic data collected. Preliminary observations indicate a 4% increase in group nesting frequencies near community forest edges compared to the 2023 baseline survey zones.</p>
+                </div>
+
+                <div class="research-sidebar-metrics">
+                    <div class="metric-card">
+                        <h4>Field Metrics</h4>
+                        <ul>
+                            <li><strong>Camera Traps:</strong> 42 Active Nodes</li>
+                            <li><strong>Data Collected:</strong> 1.2 TB Field Audio</li>
+                            <li><strong>Community Scouts:</strong> 12 Trained Trackers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-attached-files">
+                <h4>Interim Resources & Field Manuals</h4>
+                <div class="research-download-grid">
+                    <div class="r-file-card">
+                        <i class="fa-regular fa-file-pdf pdf-color"></i>
+                        <div class="r-file-details">
+                            <h5>Q1 2026 Methodology Protocol</h5>
+                            <a href="documents/methodology-2026.pdf" download>Download PDF (2.4MB)</a>
+                        </div>
+                    </div>
+                    <div class="r-file-card">
+                        <i class="fa-regular fa-file-excel excel-color"></i>
+                        <div class="r-file-details">
+                            <h5>Raw Nesting Coordinates Map</h5>
+                            <a href="documents/nesting-coordinates.xlsx" download>Download Dataset</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="research-item-block completed">
+            <div class="research-meta-header">
+                <span class="status-badge status-completed">Completed</span>
+                <span class="research-timeline"><i class="fa-regular fa-calendar"></i> 2022 - 2025</span>
+            </div>
+            
+            <h2 class="research-title">Ethnobotanical Survey of Non-Timber Forest Products (NTFPs)</h2>
+            <p class="research-lead"><strong>Collaborative Partners:</strong> Baka Indigenous Council & TFRD Socio-Economic Team</p>
+            
+            <div class="research-body-grid">
+                <div class="research-text-content">
+                    <h3>Final Assessment</h3>
+                    <p>A comprehensive classification of 85 indigenous plant species utilized by the forest-dwelling communities. The research evaluated sustainable harvest boundaries for Moabi bark and Wild Mango seeds to protect long-term flora regeneration cycles.</p>
+                    
+                    <h3>Key Outcomes</h3>
+                    <p>Successfully established three community-managed nurseries. The published findings formed the foundational extraction guidelines adopted by local sustainable cosmetics production units.</p>
+                </div>
+
+                <div class="research-sidebar-metrics">
+                    <div class="metric-card">
+                        <h4>Impact Summary</h4>
+                        <ul>
+                            <li><strong>Species Catalogued:</strong> 85 Varieties</li>
+                            <li><strong>Published Papers:</strong> 2 Peer-Reviewed</li>
+                            <li><strong>Local Income Impact:</strong> +18% Harvest Value</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-attached-files">
+                <h4>Final Published Artifacts</h4>
+                <div class="research-download-grid">
+                    <div class="r-file-card">
+                        <i class="fa-solid fa-book-open book-color"></i>
+                        <div class="r-file-details">
+                            <h5>Complete Ethnobotanical Compendium</h5>
+                            <a href="documents/ntfp-compendium-final.pdf" download>Download Monograph</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
